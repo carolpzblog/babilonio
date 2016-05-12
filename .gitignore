@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+double babilonio (double numero){
+
+	double error = 0.0001;
+	double s = numero;
+
+  do{
+  s = (s + (numero/s))/2;
+  cout << "resultado intermedio " << s << endl;
+  }while ((s - numero/s) > error);
+	return s;
+  }
+
+
+int main(){
+
+double num;
+cout << "dime el numero que quieres sacar raiz";
+cin >> num;
+cout << "la raiz cuadrada es" << babilonio(num);
+return 0;
+}
